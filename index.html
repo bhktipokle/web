@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 💗 Floating Hearts -->
+<div class="hearts-container"></div>
+
+<!-- 🎉 Confetti -->
+<div class="confetti-container"></div>
+
+<!-- 🤪 Funny Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <p id="popupText"></p>
+    <button onclick="closePopup()">Okay 😭</button>
+  </div>
+</div>
+
+<!-- ❤️ WELCOME -->
+<section class="welcome center">
+  <h1>For You 💝</h1>
+  <p>I made something special just for you</p>
+  <button onclick="scrollToSection('questions')">Start 😌</button>
+</section>
+
+<!-- 🤪 QUESTIONS (NOT CENTERED) -->
+<section id="questions" class="questions">
+  <h2>Very Serious Questions 😏</h2>
+
+  <div class="question-box">
+    <p>Who is the cutest human alive? 😌</p>
+    <button onclick="wrongAnswer()">Ryan Gosling</button>
+    <button onclick="correctAnswer()">YOU ❤️</button>
+    <button onclick="wrongAnswer()">Me (nice try)</button>
+  </div>
+
+  <div class="question-box">
+    <p>Who is always right? 😤</p>
+    <button onclick="correctAnswer()">YOU</button>
+    <button onclick="wrongAnswer()">Google</button>
+    <button onclick="wrongAnswer()">Logic</button>
+  </div>
+
+  <div class="question-box">
+    <p>Who do I love the most? 💘</p>
+    <button onclick="wrongAnswer()">Pizza</button>
+    <button onclick="correctAnswer()">YOU 🥹</button>
+    <button onclick="wrongAnswer()">Sleep</button>
+  </div>
+
+  <button onclick="scrollToSection('romantic')">Continue 💕</button>
+</section>
+
+<!-- 💌 ROMANTIC -->
+<section id="romantic" class="romantic center">
+  <h2>Why I Love You ❤️</h2>
+  <p id="typing"></p>
+  <button onclick="scrollToSection('surprise')">One last thing 😳</button>
+</section>
+
+<!-- 🎁 SURPRISE -->
+<section id="surprise" class="surprise center">
+  <h2>For You 💖</h2>
+  <p class="question">Will you be my Valentine? ❤️</p>
+
+  <div class="buttons">
+    <button class="yes-btn" onclick="yesClicked()">YES 💘</button>
+    <button class="no-btn" id="noBtn">NO 💔</button>
+  </div>
+
+  <p id="finalMessage"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

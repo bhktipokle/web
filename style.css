@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* 🔥 DEFAULT SECTION (normal flow) */
+section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* ✅ CENTER ONLY THESE SECTIONS */
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff4d6d;
+}
+
+h2 {
+  font-size: 2.2em;
+  color: #ff4d6d;
+}
+
+p {
+  font-size: 1.3em;
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1em;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background: #e63b5f;
+}
+
+.welcome { background: #fff0f5; }
+.questions { background: #ffffff; }
+.romantic { background: #fff0f5; }
+.surprise { background: #ffe4e9; }
+
+.question-box {
+  margin: 40px 0;
+}
+
+/* 😈 YES / NO */
+.buttons {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-btn {
+  background: #aaa;
+  position: absolute;
+  left: 55%;
+}
+
+#finalMessage {
+  font-size: 1.6em;
+  color: #ff4d6d;
+  margin-top: 30px;
+}
+
+/* 💗 Floating hearts */
+.hearts-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 🎉 Confetti */
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.confetti {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* 🤪 Popup */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 300px;
+}
